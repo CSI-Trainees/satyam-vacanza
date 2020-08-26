@@ -1,0 +1,361 @@
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+    
+    
+    
+}
+
+/*-------navigation-------*/
+
+
+.nav-left h1{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Raleway',sans-serif;
+    font-weight: 500;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    position: fixed;
+    z-index: 11;
+}
+
+.nav-right {
+  display: none;
+  
+  position: fixed;
+  right: 6%;
+  top: .6%;
+  flex-direction: row;
+  
+  transform: translateY(-3rem);
+  z-index: 11;
+}
+
+.nav-left{
+  float: left;
+  margin:0;
+  padding:0;
+  
+}
+
+
+.nav-right a{
+    text-decoration: none;
+    color: #fff;
+    margin: 1vh;
+    padding: 1vh 1vh;
+    font-family: 'Roboto', sans-serif;
+      
+     
+    background-color: black;
+    border-radius: 4px;
+  
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    opacity: 0.5;
+}
+  
+.nav-right a:hover{
+      opacity:1;
+      transition-duration: 0.8s;
+      /*background-color: white;
+      color: black;
+      cursor: pointer;*/
+
+}
+
+
+
+
+
+.background{
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url('back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+      
+    background-position: center top;
+    position: relative;
+    
+     
+      
+}
+  /*/////////////////////////toggle///////////*/
+
+
+#toggle{
+    display: none;
+}
+
+.togglearea{
+      
+    color: black;
+    padding: 10px;
+    float: right;
+    position: fixed;
+    left: 95%;
+    top: .5%;
+    z-index: 11;
+
+}
+
+  .togglearea:active{
+    transition-delay: 3s;
+  }
+
+
+.togglearea label{
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+  .togglearea label span{
+     background-color: black;
+     height: 2px;
+     width: 50%;
+     margin: 2px 0px;
+  }
+  #toggle:checked + .nav-right{
+    display: flex;
+    transform: translateY(0);
+    transition: all .5s;
+}
+  
+ 
+
+    /*//////////////////rotate img/////////////////////////*/
+
+
+
+    .rotate{
+        display:block;
+        position: absolute;
+        top: 27%;
+        left:48%;
+        width: 220px;
+        height: 220px;
+        margin: -60px 0 0 -60px;
+        opacity: 0.8;
+        z-index: 10;
+        -webkit-transition: -webkit-transform 0.3s;
+
+    }
+    .rotate:hover{
+        -webkit-transform: rotate(1440deg) scale(1.2) translateZ(0);
+        
+        
+    }
+    .vac{
+        position: absolute;
+        top: 14%;
+        left: 50%; transform: translate(-50%,0);
+
+        
+        width: 620px;
+        height: 620px;
+        z-index: 1;
+    
+
+    }
+   
+   
+
+    /*--------------button--------------------*/
+
+    
+
+    .button{
+        position: absolute;
+        top: 74vh;
+        
+        left: 50%; transform: translate(-50%,0);
+        z-index: 11;
+        
+    }
+    .button a{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        letter-spacing: 1px;
+        margin: 20px;
+        padding: 15px;
+        font-family: 'Raleway',sans-serif;
+        border: 2px solid #fff;
+        border-radius: 50px ;
+        align-items: center;
+    }
+   .button a:hover{
+       background-color: white;
+       color: black;
+       cursor: pointer;
+   }
+
+
+    /*----content-------*/
+
+.cont{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    padding: 3rem 3rem 0rem 3rem;
+    
+    background: #eeeeee;
+    display: flex;
+    flex-direction: column;
+    }
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    flex-direction: row;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+}
+
+
+
+.card .image-data{
+    height: 270px;
+    width: 260px;
+    overflow: hidden;
+    /* flex-shrink: 0;  */
+}
+.image-data{
+   
+    position: relative;
+    overflow: hidden;
+    flex-basis: 30%;
+    
+    
+}
+.image-data img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: -30px;
+    transform: skew(10deg);
+}
+
+
+
+.card{
+    flex-basis: 60%;
+    margin-left: 20px;
+}
+
+
+/* --------------------content ki styling---------------------- */
+.content{
+    padding: 1rem 4rem;
+}
+
+
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(49, 36, 36);
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+.post p{
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin: 5px;
+    color: rgb(128, 128, 128);
+}
+
+/*---------- read more button----------- */
+
+
+.cta a{
+    font-size: 20px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(6, 138, 72);
+    padding: 7px 10px;
+    
+    border: 2px solid rgb(6, 138, 72);
+    
+    border-radius: 4px;
+}   
+.cta a:hover{
+    background-color: rgb(6, 138, 72);
+    color: #fff;
+    transition: .5s;
+}
+
+/* ---------footer karna hai abb---------- */
+
+footer{
+    margin-top: 3px;
+    height: 25%;
+    width: 100vw;
+    
+}
+
+@keyframes zoominout{
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.4,1.4);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+.img-data{
+    height: 8rem;
+    position: relative;
+    overflow: hidden;
+
+}
+ .footerimg img {
+     background: url("footer.png");
+     width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: zoominout 8s infinite;
+  
+    /* overflow: hidden;
+    background: cover;
+    max-height: 80px;
+    max-width: 300px; */
+}
+
+.bars img{
+    width: 10%;
+    height: 10%;
+}
+.link{
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    width: 50%;
+
+    top : 250%; transform: translate(-50%,0);
+    
+}
