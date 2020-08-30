@@ -5,7 +5,7 @@
     padding:0;
 }
 
-/*-------navigation-------*/
+/*--------------------------------------------navigation--------------------------------------------------------*/
 
 .nav-left h1{
     color: #fff;
@@ -19,11 +19,10 @@
 }
 
 .nav-right {
-  /* display: none; */
-  position: fixed;
-  right: 6%;
-  top: -13%;
-  z-index: 11;
+   position: fixed;
+   right: 6%;
+   top: -13%;
+   z-index: 11;
   
 }
 
@@ -35,27 +34,27 @@
     font-family: 'Roboto', sans-serif;
     background-color: black;
     border-radius: 4px;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     letter-spacing: 2px;
-    opacity: 0.8;
+    opacity: 0.7;
     
 }
   
 .nav-right a:hover{
-      opacity:1;
-      background-color: #fff;
-      color: black;
-      transition-duration: 0.3s; 
+    opacity:1;
+    background-color: #fff;
+    color: black;
+    transition: all 0.3s ease; 
 }
 
 
-/*----------------------- navigation end here----------------- */
+/*---------------------------------------- background------------------------------------------------ */
 
 
 
 
 .background{
-    background-image: linear-gradient(rgba(78, 68, 68, 0.493),rgba(78, 68, 68, 0.493)),url('background.png');
+    background-image: linear-gradient(rgba(78, 68, 68, 0.393),rgba(78, 68, 68, 0.393)),url('background.png');
     background-size: cover;
     width: 100%;
     height: 94vh;
@@ -63,19 +62,20 @@
     background-attachment: fixed;
     position: relative;     
 }
-  /*/////////////////////////toggle///////////*/
+
+
+  /*------------------------------------------------toggle---------------------------------------------*/
 
 
 #toggle{
     display: none;
 }
 
-label{
-      
+.nav_butt{  
     color: black;
     padding: 10px;
     position: fixed;
-    left: 94vw;
+    right: 2%;
     top: 1.4%;
     z-index: 11;
     background-color: white;
@@ -87,40 +87,33 @@ label{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: all .3s;
-    
+    transition: all .3s;   
 }
 
-
-
-
-
   
-  .navigation_icon{
+.navigation_icon{
     display: inline-block;
-     background-color: black;
-     height: .17rem;
-     width: 1.6rem;
-     margin: 2px 0px;
-     position: relative;
+    background-color: black;
+    height: .17rem;
+    width: 1.6rem;
+    margin: 2px 0px;
+    position: relative;
   }
   
 
-  .navigation_icon::before{
-      content: "";
-      display: inline-block;
-      width: 1.6rem;
-      height: .17rem;
-      background-color: black;
-      position: absolute;
-      left: 0;
-      top: -.4rem;
-      transition: all 0.3s ease;
+.navigation_icon::before{
+    content: "";
+    width: 1.6rem;
+    height: .17rem;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: -.4rem;
+    transition: all 0.3s ease;
   }
   
   .navigation_icon::after{
     content: "";
-    display: inline-block;
     width: 1.6rem;
     height: .17rem;
     background-color: black;
@@ -143,29 +136,25 @@ label{
     transform: rotate(-135deg);
 }
 #toggle:checked ~ .nav_butt  + .nav-right{
-    display: flex;
-    top: .7%;
+    top: 3%;
     transform: rotate(-360deg);
     transition: all .5s;
 }
 
 
- 
-  
- 
 
-    /*//////////////////rotate img/////////////////////////*/
+    /*----------------------------------------------rotate logo----------------------------------------*/
 
 
 
 .rotate{
-    display:block;
+    width: 100%;
     position: absolute;
-    top: 27%;
-    left: 47%; 
-    /* width: 220px;
-    height: 220px; */
-    margin: -60px 0 0 -60px;
+    top: 30%;
+    left: 50%;
+    margin: 0;
+    padding: 0; 
+    margin: -90px 0 0 -90px;
     opacity: 0.8;
     z-index: 10;
     -webkit-transition: -webkit-transform 0.3s;
@@ -179,13 +168,11 @@ label{
     position: absolute;
     top: 14%;
     left: 50%; transform: translate(-50%,0);        
-    /* width: 100%; */
-    /* height: 420px;      */
 }
    
    
 
-    /*--------------button--------------------*/
+/*-------------------------------------------------button (register/start)--------------------------------------------------*/
 
     
 
@@ -204,7 +191,6 @@ label{
     letter-spacing: 1px;
     margin: 20px;
     padding: 15px;
-    /* display: inline-block; */
     font-size: 20px;
     font-family: 'Raleway',sans-serif;
     border: 2px solid #fff;
@@ -221,11 +207,12 @@ label{
     padding: .7rem 0;
     right: -25%;
     transition: .5s;
-    /* padding-right: 20px; */
+    padding-right: 15px;
 }
 
-.a:hover{
-    padding-right: 40px;
+.button a:hover{
+    padding-right: 35px;
+    transition: all .5s;
 }
 
 a:hover::after{
@@ -234,10 +221,13 @@ a:hover::after{
 }
 
 
-    /*----content-------*/
+/*--------------------------------------------------content-------------------------------------------*/
+
+
+
 
 .cont{ 
-    padding: 7vh 4vw 0 4vw; 
+    padding: 10vh 5vw 0 5vw; 
     background: #eeeeee;
     display: flex;
     flex-direction: column;
@@ -261,7 +251,6 @@ a:hover::after{
 }
 
 .image-data{
-   
     position: relative;
     overflow: hidden;
     flex-basis: 40%;
@@ -283,11 +272,12 @@ a:hover::after{
 
 .card{
     flex-basis: 60%;
-    margin-left: 20px;
 }
 
 
 /* --------------------content ki styling---------------------- */
+
+
 .content{
     padding: 2vh 3vw;
 }
@@ -296,9 +286,7 @@ a:hover::after{
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
-    color: rgba(46, 42, 42, .9);
-    margin: 0;
-    
+    color: rgba(46, 42, 42, .9);   
     font-size: 20px;
 }
 
@@ -313,6 +301,9 @@ h3 {
 
 /*---------- read more button----------- */
 
+.cta{
+    margin-bottom: 2vh;
+}
 
 .cta a{
     font-size: 20px;
@@ -330,12 +321,12 @@ h3 {
     transition: .5s;
 }
 
-/* ---------footer karna hai abb---------- */
 
-footer{
-    height: 25%;
-    width: 100%;   
-}
+
+/* -------------------------------footer styling--------------------------------- */
+
+
+
 
 /* @keyframes zoominout{
     0% {
@@ -364,7 +355,7 @@ footer{
   }
 
 .img-data{
-    height: 8rem;
+    height: 18vh;
     position: relative;
     overflow: hidden;
 }
@@ -376,43 +367,34 @@ footer{
     position: absolute;
     top: 0;
     left: 0;
-    animation: /*zoominout*/updown 8s infinite;   
+    animation: /* zoominout */updown 8s infinite;   
 }
-
 .bars{
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    z-index: 1;    
+    position: absolute;
+    top: 20%;
+    
 }
 
 .bars img{
-    height: 43px;
-    width: 44px;
+    height: 7vh;
+    width: 7vh;
     padding: 8px;
-    margin-left: 4px;
-    margin-top: -10rem;
+    margin: 4px;  
     border-bottom: 2px dotted white;
     z-index: 1;
-    -webkit-transition: -webkit-transform 0.3s;
+    -webkit-transition: -webkit-transform  .3s;
 
 }
 
 .bars img:hover{
-        cursor: pointer;
-        -webkit-transform: rotate(5deg) scale(1.2);
+    cursor: pointer;
+    -webkit-transform: rotate(5deg) scale(1.2);
 }
 
-
-/* .foot{
-    height: 10px;
-    width: 100%;
-
-} */
-
-.foot h6{
+.copyright{
     background-color: rgb(24, 109, 69);
     padding: 5px;
     font-size: 10px;
