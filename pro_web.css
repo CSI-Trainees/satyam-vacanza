@@ -135,7 +135,7 @@
     top: 0;
     transform: rotate(-135deg);
 }
-#toggle:checked ~ .nav_butt  + .nav-right{
+#toggle:checked ~  .nav-right{
     top: 3%;
     transform: rotate(-360deg);
     transition: all .5s;
